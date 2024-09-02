@@ -1,0 +1,149 @@
+body{
+    margin: 5%;
+    color: #F2F0EB;
+}
+
+.mainNav{
+    margin-right: auto;
+    font-size: 10rem;
+} 
+
+nav{
+    list-style-type: disc;
+  align-items: center; 
+  display: inline-block;  
+  padding: 10px; 
+  text-decoration: none;
+  position: absolute;
+  top: 100px;
+  right: 10px;
+
+} 
+
+h1{
+    font-size: 10rem;
+    letter-spacing: -1rem; 
+    margin-top: 0;
+    font-weight: bolder;
+    color: 
+    #486773;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1;
+    text-decoration: none;
+}
+
+h2{
+    font-size: 2.441rem;
+  letter-spacing: -0.12rem;
+  line-height: 1.2;
+  color: #95A7BF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+h3{
+    color: #95A7BF;
+    letter-spacing: -0.02rem;
+  line-height: 1.2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.smalltitle{
+    font-size: 5rem;
+    letter-spacing: -0.6rem;
+    text-decoration: none; 
+}
+
+span{
+    color: darkblue;
+    display: inline-block;
+  transform: scaleX(-1) translateX(-0.2rem);
+}
+
+p{
+    color: #281203;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 1.563rem;
+}
+
+a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.categoryList a{
+    text-decoration: none;
+    padding: 2em;
+    color: #281203;
+    background-color:lavender;
+    border-radius: 5px;
+}
+
+ul{
+    list-style-type: disc;
+} 
+
+dl{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+dt{
+    font-weight: bold;
+}
+
+li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 0.5rem;
+    /* text-decoration: underline; */
+    border-radius: 5px;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    list-style-type: disc;
+    color: black;
+}
+
+a:hover{
+    text-decoration-color: #486773;
+    text-decoration: underline;
+}
+
+a:visited{
+    color: black;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.discounted p:last-child {
+    background: red;
+    padding: 0.2rem;
+  }
+
+  .productlist article.onSale .discounted {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .purchaseBox {
+    background: #d8d8d8;
+    color: black;
+    padding: 1rem;
+    box-sizing: border-box;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  }
+
+  .purchaseBox button {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+  }

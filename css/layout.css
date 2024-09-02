@@ -1,0 +1,26 @@
+.categoryList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.productlistMain{
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+  gap: 2rem;
+}
+
+@media screen and (min-width: 900px) {
+    .breadcrumbs {
+      display: flex;
+      font-size: 0.8rem;
+      list-style-type: none;
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    .purchaseBox {
+      order: 2;
+      transform: translate(-50px, -100px);
+    }
+  }
