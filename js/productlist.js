@@ -1,47 +1,33 @@
+window.addEventListener("DOMContentLoaded", init);
+
+const url = `https://kea-alt-del.dk/t7/api/products?limit=15`;
+const skabelon = document.querySelector("template").content;
+const container = document.querySelector("main");
+
 fetch ("https://kea-alt-del.dk/t7/api/products")
 .then(res=>res.json())
 .then(showProducts)
 
-function showProducts(products){
-    //looper og kalder showProduct
-    products.forEach(showProduct)
-} 
-
-function showProduct(product){ 
-    // console.log(product);
-    //fang template
-    const template = document.querySelector ("#smallProductTemplate").content;
-    //lav en kopi 
-    const copy = template.cloneNode(true);
-    //ændre indhold 
-    copy.querySelector("h3").textContent=product.productdisplayname;
-    if(product.soldout){
-        //produktet er udsolgt 
-        copy.querySelector("article").classList.add("soldOut");
-    }
-    //appende 
-    document.querySelector("main").appendChild(copy);
-
-    //vis billede img 
-    // const img = copy.querySelector("img");
-    img.src = `https://kea-alt-del.dk/t7/images/webp/${id}.webp`;
-    // img.alt = product.productdisplayname;
+function init(){
+    fetch(url)
+    .then((res)=>res.json())
+    .then((products)=>showProducts(products));
 }
 
+function showProducts(products){
+    products.forEach((product)=> {
+        const kopi = skabelon.cloneNode(true);
+        kopi.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+        kopi.querySelector("img").alt = product.productdisplayname;
+        kopi.querySelector("h3").textContent = product.productdisplayname;
+        kopi.querySelector(".price").textContent = product.price;
+        kopi.querySelector("a").href = `product.html?id=${product.id}`;
+        kopi.querySelector(".subtle").textContent = product.brandname;
+        container.appendChild(kopi);
+    })
 
+    kopi.querySelector(".read_more").setAttribute("href", `product.html?id=${product.id}`);
+    //append 
+    document.querySelector(".product_list").appendChild(copy);
+}
 
-// {
-//     "id": 1164,
-//     "gender": "Men",
-//     "category": "Apparel",
-//     "subcategory": "Topwear",
-//     "articletype": "Tshirts",
-//     "season": "Winter",
-//     "productionyear": 2015,
-//     "usagetype": "Sports",
-//     "productdisplayname": "Blue T20 Indian Cricket Jersey",
-//     "price": 1595,
-//     "discount": 28,
-//     "brandname": "Nike",
-//     "soldout": 1
-//   }
