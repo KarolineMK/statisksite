@@ -23,9 +23,9 @@ function showProduct(product){
     document.querySelector("main").appendChild(copy);
 
     //vis billede img 
-    const img = copy.querySelector("img");
+    // const img = copy.querySelector("img");
     img.src = `https://kea-alt-del.dk/t7/images/webp/${id}.webp`;
-    img.alt = product.productdisplayname;
+    // img.alt = product.productdisplayname;
 }
 
 
