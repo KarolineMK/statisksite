@@ -58,7 +58,7 @@ h3{
 span{
     color: darkblue;
     display: inline-block;
-  transform: scaleX(-1) translateX(-0.2rem);
+  /* transform: scaleX(-1) translateX(-0.2rem); */
 }
 
 p{

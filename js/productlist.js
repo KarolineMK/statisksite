@@ -7,7 +7,7 @@ function showProducts(products){
     products.forEach(showProduct)
 } 
 
-function showProduct(product){
+function showProduct(product){ 
     // console.log(product);
     //fang template
     const template = document.querySelector ("#smallProductTemplate").content;
