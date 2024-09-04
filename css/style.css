@@ -146,3 +146,15 @@ img{
     margin-top: 1rem;
     width: 100%;
   }
+  .productlistMain article.soldOut img {
+    opacity: 0.5;
+  }
+  .productlistMain article.soldOut::before {
+    content: "Sold Out";
+    position: absolute;
+    background: var(--color);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    padding: 2rem;
+  }
